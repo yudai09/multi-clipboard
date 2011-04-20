@@ -1,0 +1,32 @@
+{
+  "name": "Multi-clipboard",
+  "version": "1.11", 
+  "description": "multiple copy/paste clipboard assists your browsing",
+  "icons": {"48": "clipboard.png"},
+  "browser_action": {
+    "default_icon": "clipboard.png",
+    "default_title": "Multi-clipboard",
+    "default_popup": "popup.html"
+  },
+ "content_scripts": [
+     {
+      "matches": ["http://*/*", "https://*/*", "file://*/*", "ftp://*/*" ],
+      "all_frames":true, 
+      "js": [
+		"foreground.js",
+		"clipboard.js",
+		"ZeroClipboard.js"	
+             ],
+      "run_at": "document_start"
+    }
+   ],
+   "background_page": "background.html",
+  "permissions": [
+  "tabs",
+  "bookmarks",
+  "history",
+  "http://www.blogger.com/",
+  "http://*.google.com/",
+  "unlimited_storage"
+  ]
+}
