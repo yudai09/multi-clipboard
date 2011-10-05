@@ -1,6 +1,6 @@
 {
   "name": "Multi-clipboard",
-  "version": "1.11", 
+  "version": "1.30", 
   "description": "multiple copy/paste clipboard assists your browsing",
   "icons": {"48": "clipboard.png"},
   "browser_action": {
@@ -14,19 +14,12 @@
       "all_frames":true, 
       "js": [
 		"foreground.js",
-		"clipboard.js",
-		"ZeroClipboard.js"	
+		"clipboard.js"
              ],
       "run_at": "document_start"
     }
    ],
    "background_page": "background.html",
   "permissions": [
-  "tabs",
-  "bookmarks",
-  "history",
-  "http://www.blogger.com/",
-  "http://*.google.com/",
-  "unlimited_storage"
   ]
 }

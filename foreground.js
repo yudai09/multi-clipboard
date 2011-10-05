@@ -26,11 +26,11 @@ window.addEventListener("keydown", captureKeydown,false);//capture event
 window.addEventListener("keypress", captureKeypress,false);//capture event
 window.addEventListener("scroll",captureScroll,false);
 
-window.addEventListener("mouseup", function(e){
-	console.log("mouseup");
-	kill();
+// window.addEventListener("mouseup", function(e){
+// 	console.log("mouseup");
+// 	kill();
 	
-});
+// });
 var flushFuncBuffer=Array(32);
 
 function onLoadListener(e){
@@ -98,7 +98,5 @@ function yank(){
 	clipboard.yank();
 }
 function kill(){
-	var clip = new ZeroClipboard.Client();
-	clip.setText("tset");
 	clipboard.kill();
 }

@@ -1,58 +1,89 @@
-<html>
-        <head>
-                <style type="text/css">
-                        #d_clip_button {
-                                text-align:center; 
-                                border:1px solid black; 
-                                background-color:#ccc; 
-                                margin:10px; padding:10px; 
-                        }
-                        #d_clip_button.hover { background-color:#eee; }
-                        #d_clip_button.active { background-color:#aaa; }
-                </style>
-        </head>
-        <body>
-                <script type="text/javascript" src="ZeroClipboard.js"></script>
-                
-                Copy to Clipboard: <input type="text" id="clip_text" size="40" value="Copy me!"/><br/><br/> 
-        
-                <div id="d_clip_button">Copy To Clipboard</div>
-        
-                <script language="JavaScript">
-                        var clip = new ZeroClipboard.Client();
-                        
-                        clip.setText( '' ); // will be set later on mouseDown
-                        clip.setHandCursor( true );
-                        clip.setCSSEffects( true );
-                        
-                        clip.addEventListener( 'load', function(client) {
-                                 alert( "movie is loaded" );
-                        } );
-                        
-                        clip.addEventListener( 'complete', function(client, text) {
-                                alert("Copied text to clipboard: " + text );
-                        } );
-                        
-                        clip.addEventListener( 'mouseOver', function(client) {
-                                 alert("mouse over"); 
-                        } );
-                        
-                        clip.addEventListener( 'mouseOut', function(client) { 
-                                 alert("mouse out"); 
-                        } );
-                        
-                        clip.addEventListener( 'mouseDown', function(client) { 
-                                // set text to copy here
-                                clip.setText( document.getElementById('clip_text').value );
-                                
-                                 alert("mouse down"); 
-                        } );
-                        
-                        clip.addEventListener( 'mouseUp', function(client) { 
-                                 alert("mouse up"); 
-                        } );
-                        
-                        clip.glue( 'd_clip_button' );
-                </script>
-        </body>
-        </html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+body{
+font-size:18px;
+color:#000;
+background:#FFF;
+}
+a
+{
+color:#FFF;
+}
+
+
+.style_outbox {
+border:solid 1px #2d2d2d;
+text-align:center;
+background:#0000FF;
+padding:100px 50px 100px 50px;
+-moz-border-radius: 5px; 
+-webkit-border-radius: 5px; 
+border-radius: 5px;
+}
+
+.style_outbox {
+-moz-box-shadow:10px  10px 5px #000000;
+-webkit-box-shadow:10px  10px 5px #000000;
+box-shadow:10px  10px 5px #000000;
+}
+
+.style_outbox {
+position: absolute;
+left: 10px;
+top: 10px;
+width: 400px;
+height: 500px;
+}
+
+.style_outbox {
+opacity: 0.6;
+}
+
+.style_dvi {
+color: #FFF;
+background: #000;
+}
+
+.style_innerbox {
+border:solid 1px #000;
+text-align:center;
+background:#FFF;
+padding:100px 50px 100px 50px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+opacity: inherit none;
+}
+
+.style_innerbox {
+text-shadow:5px 5px 5px #000000;
+}
+
+
+
+</style>
+</head>
+
+
+<body>
+hellohellohellohellohellohellohellohello<BR>
+hellohellohellohellohellohellohellohello<BR>
+hellohellohellohellohellohellohellohello<BR>
+hellohellohellohellohellohellohellohello<BR>
+hellohellohellohellohellohellohellohello<BR>
+hellohellohellohellohellohellohellohello<BR>
+hellohellohellohellohellohellohellohello<BR>
+hellohellohellohellohellohellohellohello<BR>
+hellohellohellohellohellohellohellohello<BR>
+hellohellohellohellohellohellohellohello<BR>
+hellohellohellohellohellohellohellohello<BR>
+hellohellohellohellohellohellohellohello<BR>
+
+<div class="style_outbox">hello
+  <div class="style_innerbox">hello</div>
+</div>
+
+</body>
+</html>
